@@ -42,7 +42,7 @@ Supervisor: Torbjørn Karl Svendsen
   - #### Balanced_folds: Code to create fold distributions and files showing the created distributions for the PC-GITA and EWA-DB databases. 
 - #### Generated_results: Plots or images generated through other code will be saved here. 
 - #### Images: Folder with images showing results that are used in the report for the project. 
-- #### Excell Features - results: Features extracted from EWA-DB and PC-GITA.  
+- #### Excell Features: Features extracted from EWA-DB and PC-GITA.  
 - #### Excell Results: All results obtained for this project used in the report. 
 
 
