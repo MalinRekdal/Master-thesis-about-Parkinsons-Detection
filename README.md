@@ -1,41 +1,41 @@
-# Master-thesis for Malin Rekdal
+# Master thesis for Malin Rekdal
  - Title: Speech Analysis for Automatic Parkinson's Disease Detection
- - Sub title: Feature, data, and language analysis for performance optimization.
+ - Subtitle: Feature, data, and language analysis for performance optimization.
 
 Supervisor: Torbjørn Karl Svendsen
 
- This code is created for a master thesis in Electronic System Design and Innovation at NTNU. 
+ This code was created for a master's thesis in electronic system design and innovation at NTNU. 
 
 ## 1 -  Main files to use in this repository: 
 - #### Code: 
   - Setup
-    - readMe: this file with an introduction to the code. 
-    - constants: constant definitions that is used throughout the other code
-    - functions: function definitions that is used throughout the other code
-    - project_setup: Setup file to run things that is common for many files in the beginning. 
-    - create_features_from_wav: python script that creates a excell document with the feature values for the speech recordings in PC-GITA and EWA-DB. 
+    - readMe: this file has an introduction to the code. 
+    - constants: constant definitions that are used throughout the other code
+    - functions: function definitions that are used throughout the other code
+    - project_setup: Setup file to run things common for many files in the beginning. 
+    - create_features_from_wav: a Python script that creates an Excel document with the feature values for the speech recordings in PC-GITA and EWA-DB. 
     - requirements.txt: Technical requirements for this project to work. 
 
   - Feature and data definitions 
     - features_to_choose_from: md file with an overview of the Phonation, Articulation and Prosody features we can choose between. 
-    - definition_of_data_and_feature_groups: Definition of the different feature and data sub groups used throughout the project. 
-    - wav_paths: All paths to the waveforms for PC-GITA and EWA-DB that will be used to extract features. 
+    - definition_of_data_and_feature_groups: Definition of the different feature and data subgroups used throughout the project. 
+    - wav_paths: All paths to the waveforms for PC-GITA and EWA-DB will be used to extract features. 
 
   - Classification 
-    - svm_model: Script that can be runned with different data and feature combinations and predicts PD vs HC based on a SVM model.  
+    - svm_model: Script that can be run with different data and feature combinations and predicts PD vs HC based on an SVM model.  
     - svm_model_diff_datasets: Used to evaluate how the model works when we train on one database and test on another. 
     - svm_model_combined_dataset: Used to evaluate how the model works when we train and test on a combination of the different databases. 
-    - GITA_model_detailed_results: Predicts PD vs HC based on a feature - data combination, and gives a more detailed analysis of the results for PC-GITA. 
-    - grid_search: File to do grid search on SVM with different data and features to find the optimal parameter values.
+    GITA_model_detailed_results: This model predicts PD vs. HC based on a feature-data combination and gives a more detailed analysis of the results for PC-GITA. 
+    - grid_search: File to do a grid search on SVM with different data and features to find the optimal parameter values.
 
 
 
 
   - Detailed analysis of data and features: 
     - analyse_metadata files: jupyter notebook that analyses the metadata from PC-GITA and EWA-DB.
-    - analyse_signal files: jupyter notebook that analyses the waveform signals from PC-GITA, EWA-DB and wav_paths and extracts some features 
-    - feature_evaluation: Notebook that plots different features both alone and together with other features. 
-    - results_plots: Plots some different results where the values are obtained trough grid search or svm_model, but plotted later on. 
+    - analyse_signal files: jupyter notebook that analyses the waveform signals from PC-GITA, EWA-DB, and wav_paths and extracts some features 
+    - feature_evaluation: Notebook that plots different features and analyses feature values. 
+    - results_plots: Plots some different results where the values are obtained through grid search or svm_model but plotted later on. 
     - GITA_zero_and_NaN analysis: Investigates zero and NaN problems with the features extracted from DisVoice. 
     - best_features: Sequential Feature Selection and Random method to find ideal feature subsets. 
 
@@ -43,18 +43,18 @@ Supervisor: Torbjørn Karl Svendsen
 - #### Generated_results: Plots or images generated through other code will be saved here. 
 - #### Images: Folder with images showing results that are used in the report for the project. 
 - #### Excell Features: Features extracted from EWA-DB and PC-GITA.  
-- #### Excell Results: All results obtained for this project used in the report. 
+- #### Excell Results: All results obtained for this project are used in the report. 
 
 
 ## 2 - Getting started
 
 
-### 2 choises for what to do: 
-1) #### It is only the create_features_from_wav and analyse_signal files that needs the setup with DisVoice, Praat and Kaldi. Therefore you can choose to skip the steps underneath and just use the features in Features.xlsx file that is attached and run the rest of the code as normal. Then the packages you need must be installed separately as well. 
+### 2 choices for what to do: 
+1) #### Only the create_features_from_wav and analyse_signal files must be set up with DisVoice, Praat, and Kaldi. Therefore, you can skip the steps underneath and use the features in the Features.xlsx file that is attached and run the rest of the code as normal. Then, the packages you need must be installed separately. 
 
-2) #### If you do the steps underneath and set up then you can run create_features_from_wav to create features for all data. This file needs to be run with one system argument that is a string, and corresponds to the name of a file you want the features saved to. A file will then be created with the phonation, articulation and prosody features from all waveforms indicated with the paths. Then you use this file of features from the PC-GITA-data file and run the rest of the code.
+2) #### If you follow the steps and set them up, you can run create_features_from_wav to create features for all data. This file needs to be run with one system argument, a string corresponding to the name of a file you want the features saved to. A file will then be created with the phonation, articulation, and prosody features from all waveforms the paths indicate. Then, you use this file of features from the PC-GITA-data file and run the rest of the code.
 
-### The steps underneath will explain how to set up an environment on a Linux device and install everything needed for this project. This is based on my experiences and the problems I acountered.  
+### The steps underneath will explain how to set up an environment on a Linux device and install everything needed for this project. This is based on my experiences and the problems I have encountered.  
 
 
 ### 2.1 - Setup environment
@@ -90,30 +90,30 @@ Supervisor: Torbjørn Karl Svendsen
 
 
 
-### 2.2 - Make sure pip is linked to the virtual environmentet 
+### 2.2 - Make sure pip is linked to the virtual environment 
 - Use
   ```
   which pip
   ```
-- If this is not the pip related to the env you have created you need to add an alias to the .bashrc file by adding this line at the end: 
+- If this is not the pip related to the env you have created, you need to add an alias to the .bashrc file by adding this line at the end: 
   ```
   alias disenvPipp=/path_to_miniconda/miniconda3/envs/disenv/bin/pip
   ```
-  Then use disenvPipp instead of pip when installing things. 
+  Then, use disenvPipp instead of pip when installing things. 
 
-### 2.3 - Activate conda and environment when terminal starts.  
-- To automatically activate conda and the environement when the terminal start you can create a .bash_profile file. 
-  - If a .bash_profile file don't exist, create one. 
-  - To automatically start conda add this line to the bash_profile file: 
+### 2.3 - Activate conda and environment when the terminal starts.  
+- To automatically activate conda and the environment when the terminal starts, you can create a .bash_profile file. 
+  - If a .bash_profile file doesn't exist, create one. 
+  - To automatically start conda, add this line to the bash_profile file: 
     ```
     source~/.bashrc
     ```
-  - To automatically activate environment add this line to the bash_profile file: 
+  - To automatically activate the environment, add this line to the bash_profile file: 
     ```
     conda activate disenv
     ```
 
-- Note: If conda starts on its own on default and you dont care if you need to write conda activate disenv every time a new terminal is activated then 2.3 can be skipped. 
+- Note: If conda starts on its own on default and you don't care if you need to write conda activate disenv every time a new terminal is activated, then 2.3 can be skipped. 
 
 
 ### 2.4 - Install requirements to conda environment 
@@ -126,11 +126,11 @@ Supervisor: Torbjørn Karl Svendsen
 		mv praat_nogui praat 
   ```
 
-  - Add path to praat by adding a this line to .bashrc: 
+  - Add path to praat by adding this line to .bashrc: 
     ```
       export PATH=.:${HOME}/master-thesis:$PATH
     ```
-  - Note: For this experiment version 6.3.18 is used, and works well. The experiments are also tested with 6.4.05 and 6.4.06 but those seem to give some problem when extracting articulation features. 
+  Note: For this experiment, version 6.3.18 is used and works well. The experiments are also tested with 6.4.05 and 6.4.06, but those seem to have some problems when extracting articulation features. 
 
 - Install requirements from requirements.txt file: 
     ```
@@ -142,9 +142,9 @@ Supervisor: Torbjørn Karl Svendsen
     ```
     pip install disvoice
     ```
-    Note that pip install disvoice installs both pythorch and tensorflow and the other packages that is needed to use DisVoice. 
+    Note that pip install DisVoice installs packages for Python and TensorFlow and the other packages that need to use DisVoice. 
 
-      - Can also clone Disvoice repo if nootebook examples are wanted: 
+      - Can also clone Disvoice repo if notebook examples are wanted: 
         ```
         git clone https://github.com/jcvasquezc/DisVoice.git
         ```
@@ -159,12 +159,12 @@ Supervisor: Torbjørn Karl Svendsen
   ```
 		git clone https://github.com/kaldi-asr/kaldi
   ```
-  Follow the instructions in the INSTALL file in order to install the toolkit. This might need an earlier version of python, and in that case you can create such an environment like this: 
+  Follow the instructions in the INSTALL file in order to install the toolkit. This might need an earlier version of Python, and in that case, you can create such an environment like this: 
   ```
 		conda create -name disvoice27 python=2.7
   ```
   
-  Do the installation and then go back to the disenv environment created earlier with a newer python version. 
+  Do the installation and then go back to the disenv environment created earlier with a newer Python version. 
 
 
 ### 2.5 - Changes needed to DisVoice package: 
@@ -180,20 +180,20 @@ Supervisor: Torbjørn Karl Svendsen
         - Note: important to have " " after "--run". 
 
     - /miniconda3/envs/disenv/lib/python3.11/site-packages/disvoice/phonation/phonation_functions.py"
-      - change line 18 and 57: from sys.warn to warnings.warn. 
+      - change lines 18 and 57: from sys.warn to warnings.warn. 
       - Change line 11 from import sys to import warnings. 
-      - This is due to the fact that sys does not have an attribute called warning. 
+      - This is because sys does not have an attribute called warning. 
 
 
 
 ## 3 - Update constant.py according to your setup: 
-- personal_path_to_disvoice = the path to where DisVoice repo is cloned to. 
+- personal_path_to_disvoice = the path to where the DisVoice repo is cloned. 
 - personal_path_to_kaldi = the path to where kaldi repo is cloned to.
 - personal_path_to_code =  the path to where this repo is cloned to.
 - personal_path_to_PC_GITA and personal_path_to_EWA = path to the PC-GITA and EWA-DB databases. 
   - The databases are available on deepthought.ies.ntnu.no (computational server solution "marwin" available through NTNU) in talebase/data/speech_raw. Using this data can be done in one of three methods [Explained for PC-GITA, but is similar for EWA-DB] : 
     1) can be a link to the data that is located in: /talebase/data/speech_raw
-    2) Can copy the data to a location of your choise in Aulus like this: 
+    2) You can copy the data to a location of your choice in Aulus like this: 
         ```
         mkdir PC-GITA
         ln -s /talebase/data/speech_raw/PC-GITA/* path/to/new/location 
