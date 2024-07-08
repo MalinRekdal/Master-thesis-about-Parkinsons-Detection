@@ -4,7 +4,7 @@
 
 Supervisor: Torbjørn Karl Svendsen
 
- This code is created for a master thesis in Electronical System Design and Innovation at NTNU. 
+ This code is created for a master thesis in Electronic System Design and Innovation at NTNU. 
 
 ## 1 -  Main files to use in this repository: 
 - #### Code: 
