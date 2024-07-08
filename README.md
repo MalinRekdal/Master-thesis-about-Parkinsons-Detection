@@ -40,7 +40,6 @@ Supervisor: Torbjørn Karl Svendsen
     - best_features: Sequential Feature Selection and Random method to find ideal feature subsets. 
 
   - #### Balanced_folds: Code to create fold distributions and files showing the created distributions for the PC-GITA and EWA-DB databases. 
-- #### Generated_results: Plots or images generated through other code will be saved here. 
 - #### Images: Folder with images showing results that are used in the report for the project. 
 - #### Excell Features: Features extracted from EWA-DB and PC-GITA.  
 - #### Excell Results: All results obtained for this project are used in the report. 
