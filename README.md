@@ -51,7 +51,7 @@ Supervisor: Torbjørn Karl Svendsen
 ### 2 choices for what to do: 
 1) #### Only the create_features_from_wav and analyse_signal files must be set up with DisVoice, Praat, and Kaldi. Therefore, you can skip the steps underneath and use the features in the Features.xlsx file that is attached and run the rest of the code as normal. Then, the packages you need must be installed separately. 
 
-2) #### If you follow the steps and set them up, you can run create_features_from_wav to create features for all data. This file needs to be run with one system argument, a string corresponding to the name of a file you want the features saved to. A file will then be created with the phonation, articulation, and prosody features from all waveforms the paths indicate. Then, you use this file of features from the PC-GITA-data file and run the rest of the code.
+2) #### If you follow the steps and set them up, you can run create_features_from_wav to create features for all data. This file needs to be run with one system argument, a string corresponding to the name of a file you want the features saved to. A file will then be created with the phonation, articulation, and prosody features from all waveforms the paths indicate. Then, you use this file of features from the database and run the rest of the code.
 
 ### The steps underneath will explain how to set up an environment on a Linux device and install everything needed for this project. This is based on my experiences and the problems I have encountered.  
 
