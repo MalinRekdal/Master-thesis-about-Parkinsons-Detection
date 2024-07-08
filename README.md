@@ -189,7 +189,10 @@ Supervisor: Torbjørn Karl Svendsen
 - personal_path_to_disvoice = the path to where the DisVoice repo is cloned. 
 - personal_path_to_kaldi = the path to where kaldi repo is cloned to.
 - personal_path_to_code =  the path to where this repo is cloned to.
-- personal_path_to_PC_GITA and personal_path_to_EWA = path to the PC-GITA and EWA-DB databases. 
+- personal_path_to_balanced_folds = path to where the fold information is saved. 
+- personal_path_to_results = path to where you want the results plots to be saved. 
+- personal_path_to_PC_GITA and personal_path_to_EWA = path to the PC-GITA and EWA-DB databases.
+
   - The databases are available on deepthought.ies.ntnu.no (computational server solution "marwin" available through NTNU) in talebase/data/speech_raw. Using this data can be done in one of three methods [Explained for PC-GITA, but is similar for EWA-DB] : 
     1) can be a link to the data that is located in: /talebase/data/speech_raw
     2) You can copy the data to a location of your choice in Aulus like this: 
